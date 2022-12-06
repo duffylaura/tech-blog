@@ -1,14 +1,15 @@
-//Users will have an automatic ID, 
-//create their own username, enter their email, 
-//and create a password that will be hashed with bcrypt
 
-const {Model, DataTypes} = require('sequelize'); 
-const Sequelize = require('../connection'); 
-const bcrypt = require('bcrypt');
+//const sequelize = require('../connection'); 
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('sqlite::memory:');
 
-class User extends Model {};
 
-User.init({
+// Calling sequelize.define(modelName, attributes, options)
+// Extending Model and calling init(attributes, options)
+
+const User = sequelize.define('User',
+
+{
     id: {
         type: DataTypes.INTEGER, 
         allowNull: false, 
@@ -32,11 +33,11 @@ User.init({
 },
 {
     // hooks: {}
-    Sequelize, 
+    sequelize, 
     timestamps: false, 
     freezeTableName: false, 
     underscored: false, 
     modelName: 'user',
 }); 
 
-modle.exports = User; 
+module.exports = User; 

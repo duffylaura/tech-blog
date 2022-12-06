@@ -1,12 +1,11 @@
 //Posts will have an automatic ID and be linked to the User ID
 //Posts will have a title and content (both strings)
 
-const {Model, DataTypes} = require('sequelize'); 
-const Sequelize = require('../connection'); 
+//const sequelize = require('../connection'); 
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('sqlite::memory:');
 
-class Post extends Model {}; 
-
-Post.init({
+const Post = sequelize.define('Post', {
     id:{
         type: DataTypes.INTEGER, 
         allowNull: false, 
@@ -30,7 +29,7 @@ Post.init({
     },
 },
 {
-    Sequelize,
+    sequelize,
     freezeTableName: true,
     underscored: true,
     modelName: 'post',

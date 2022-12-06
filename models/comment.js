@@ -1,9 +1,8 @@
-const {Model, DataTypes} = require('sequelize');
-const sequelize = require('../connection');
+//const sequelize = require('../connection'); 
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('sqlite::memory:');
 
-class Comment extends Model {}; 
-
-Comment.init({
+const Comment = sequelize.define('Comment', {
     id:{
         type: DataTypes.INTEGER,
         allowNull: false, 
