@@ -1,7 +1,7 @@
 
 //const sequelize = require('../connection'); 
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection')
+const sequelize = require('../config/connection');
 
 class User extends Model{}
 
@@ -14,6 +14,7 @@ User.init({
     },
     username: {
         type: DataTypes.STRING, 
+        defaultValue: '',
         allowNull: false, 
         unique: true
     }, 
@@ -30,11 +31,11 @@ User.init({
 },
 {
     // hooks: {}
-    sequelize, 
-    timestamps: false, 
-    freezeTableName: false, 
-    underscored: false, 
-    modelName: 'user',
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "user",
 }); 
 
 module.exports = User; 
