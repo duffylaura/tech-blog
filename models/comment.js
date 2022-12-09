@@ -10,11 +10,6 @@ Comment.init({
         allowNull: false, 
         primaryKey: true, 
         autoIncrement: true,
-        unique: true,
-    },
-    content:{
-        type: DataTypes.STRING, 
-        allowNull:false, 
     },
     user_id: {
         type: DataTypes.INTEGER,
@@ -29,6 +24,10 @@ Comment.init({
             model: 'post',
             key: 'id',
         },
+    },
+    content:{
+        type: DataTypes.STRING, 
+        allowNull:false, 
     },
 },
 {
