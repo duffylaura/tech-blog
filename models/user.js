@@ -1,29 +1,28 @@
 
 //const sequelize = require('../connection'); 
-const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection')
 
+class User extends Model{}
 
-// Calling sequelize.define(modelName, attributes, options)
-// Extending Model and calling init(attributes, options)
-
-const User = sequelize.define('User',
-
-{
+User.init({
     id: {
         type: DataTypes.INTEGER, 
         allowNull: false, 
         primaryKey: true,
         autoIncrement: true,
+        unique: true,
     },
     userName: {
         type: DataTypes.STRING, 
         allowNull: false, 
+        unique: true
     }, 
     email: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: { isEmail: true,},
+        unique: true,
     },
     password: {
         type: DataTypes.STRING,

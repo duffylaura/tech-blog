@@ -2,15 +2,18 @@
 //Posts will have a title and content (both strings)
 
 //const sequelize = require('../connection'); 
-const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-const Post = sequelize.define('Post', {
+class Post extends Model{}
+
+Post.init({
     id:{
         type: DataTypes.INTEGER, 
         allowNull: false, 
         primaryKey: true, 
         autoIncrement: true,
+        unique: true,
     }, 
     title:{
         type: DataTypes.STRING, 

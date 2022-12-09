@@ -1,13 +1,16 @@
 //const sequelize = require('../connection'); 
-const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-const Comment = sequelize.define('Comment', {
+class Comment extends Model{}
+
+Comment.init({
     id:{
         type: DataTypes.INTEGER,
         allowNull: false, 
         primaryKey: true, 
         autoIncrement: true,
+        unique: true,
     },
     content:{
         type: DataTypes.STRING, 
