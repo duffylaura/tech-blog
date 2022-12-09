@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async(req,res)=>{
     const dataFromDb = await Post.findAll({ include:User });
     const data = dataFromDb.map((post)=>post.get({plain:true}));
-    res.render('homepage',
+    res.render('/homepage',
     {data, loggedIn: req.session.loggedIn})
 });
 
