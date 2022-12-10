@@ -47,3 +47,36 @@ THEN I am signed out of the site
 
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+
+
+
+
+Dependencies 
+
+
+        
+        
+        
+        
+       
+        
+        "handlebars": "^4.7.7",
+        
+        "mysql2": "^2.1.0",
+        
+       
+        "
+        sqlite3": "^5.1.2" 
+        
+        
+        
+        Added:
+        
+        "express-session": "^1.17.3",
+        "express": "^4.18.1", 
+        "express-handlebars": "^6.0.5",
+         
+         "dotenv": "^8.6.0",
+         "sequelize": "^6.3.5","connect-session-sequelize": "^7.0.4",  
+      
+      "bulma": "^0.9.4",

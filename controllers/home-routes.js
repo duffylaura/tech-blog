@@ -8,7 +8,7 @@ router.get('/', async(req,res)=>{
     const dataFromDb = await Post.findAll({ include:User });
     const data = dataFromDb.map((post)=>post.get({plain:true}));
     res.render('/homepage',
-    {data, loggedIn: req.session.loggedIn})
+    {data})
 });
 
 //GET route for seeing a single post with comments 
