@@ -1,0 +1,38 @@
+<div class="columns">
+
+  <div class="column">
+    <div class="column is-11 is-offset-1">
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <form class="is-flex is-justify-content-center">
+          <div class = "column">
+            <p class="title"> Title: <textarea class="textarea" id="edit-title"> {{editPostData.title}}</textarea></p>
+            <p class="title"> Body: <textarea class="textarea custom-textarea" id="edit-content">{{editPostData.content}}</textarea></p>
+            <div class = "is-flex is-justify-content-center">
+              <button id="edit-button" class="button is-centered">Make Edits</button>
+              <br>
+              <button id="delete-button" class="button is-centered">Fully Delete the Post</button>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="column is-11 is-offset-1">
+      <br>
+      <br>
+    </div>
+  </div>
+
+</div>
+
+
+
+<script src="/js/edit.js"></script>
+<script src="/js/deletePost.js"></script>

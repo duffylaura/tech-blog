@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffee Pawz Tech Blog </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <h1> Tech Blog </h1>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            {{#if loggedIn}}
+            <span aria-hidden="true"><a href="/"> Home </a></span>
+            <span aria-hidden="true"><a href="/dashboard"> Dashboard </a></span>
+            <span aria-hidden="true" id="logoutBtn"><a href="/"> Log Out </a></span>
+            {{else}}
+            <span aria-hidden="true"><a href="/login"> Login </a></span> 
+            <span aria-hidden="true"></span><a href="/signup"> Sign Up </a></span>
+            {{/if}}
+        </a>
+    </nav>
+
+    <main>
+        {{{body}}}
+    </main>
+
+</body>
+
+    <footer>
+        <div class="content has-text-centered">
+            <div>
+                <p class="is-size-5 is-mobile"> 
+                Coffee Pawz Tech Blog &#9749; &#128062; 
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/index.js"></script>
+    
+</html>

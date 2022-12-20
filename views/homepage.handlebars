@@ -1,0 +1,20 @@
+<section class="hero">
+  <p> Coffee Pawz Tech Blog Posts</p>
+</section>
+
+<div class="columms">
+  <div class="column is-half is-offset-one-quarter is-flex is-justify-content-center">
+{{#each post as |Post|}}
+    <div class="card">
+      <br>
+      <div class="card-body">
+        <p class="title is-5"> {{Post.title}}</p>
+        <p class="is-italic"> created by {{Post.user.username}} </p>
+        <br>
+        <p> {{Post.content}}</p>
+        <br>
+      </div>
+    </div>
+{{/each}}
+  </div>
+</div>

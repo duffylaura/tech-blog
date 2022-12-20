@@ -39,10 +39,10 @@ if (process.env.JAWSDB_URL) {
       host: "bootcamp",
       dialect: "mysql",
       port: 3306,
-      dialectOptions: {
-          //socketPath: "/var/run/mysqld/mysqld.sock"
-          socketPath: "/tmp/mysql.sock"
-        },
+      // dialectOptions: {
+      //     //socketPath: "/var/run/mysqld/mysqld.sock"
+      //     socketPath: "/tmp/mysql.sock"
+      //   },
       define: {
           paranoid: true
       }

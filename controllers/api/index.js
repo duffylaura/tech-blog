@@ -4,7 +4,7 @@ const router = require('express').Router();
 
 // User
 const user = require('./user-routes');
-router.use('/user', user);
+router.use('/users', user);
 
 // Post
 const posts = require('./post-routes');

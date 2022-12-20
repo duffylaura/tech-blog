@@ -1,0 +1,49 @@
+{{#if loggedIn}}
+<br>
+<div class = "columms">
+  <div class = "column is-half is-offset-one-quarter"> 
+    <div class = "column is-half is-offset-one-quarter">
+      <div class="card"> 
+        <br>
+        <p class="title"> @{{username}}'s Dashboard! </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="columms">
+  <div class="column is-half is-offset-one-quarter is-flex is-justify-content-center"> 
+{{#if post.length}}
+{{#each post as |Post|}}
+    <div class="card">
+      <br>
+      <div class="card-body">
+        <p class="title is-5"> {{Post.title}}</p>
+        <p class="is-italic"> created by {{Post.user.username}} </p>
+        <br>
+        <p> {{Post.content}}</p>
+        <br>
+          <a href="/dashboard/edit/{{Post.id}}" class="button">Edit Post</a>
+        <br>
+      </div>
+    </div>
+{{/each}}
+  </div>
+</div>
+{{else}}
+<p class="title">You have not created any posts! Get writing!</p>
+{{/if}}
+{{/if}}
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/dashboard.js"></script>
