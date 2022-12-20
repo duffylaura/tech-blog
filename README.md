@@ -3,7 +3,9 @@
 ## Description 
 
 `AS A developer who writes about tech`
+
 `I WANT a CMS-style blog site`
+
 `SO THAT I can publish articles, blog posts, and my thougths and opinions`
 
 The Coffee Pawz Tech Blog offers developers a CMS-style blog site similar to a Wordpress site where they can publish their blog posts and comment on other developers' posts as well. This web application was built following the MVC paradigm. It utilizes Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. 
@@ -32,7 +34,9 @@ Click on the deployed link above! No installation necessary!
 When you visit the site for the first time you are presented with a homepage that includes existing blog posts, naviagtion links for the homepage and dashboard, and the option to log in. You may choose to make your own account or login using the following dummy account details: 
 
 `Username: DummyAccount`
+
 `Email: DummyAccount@gmail.com`
+
 `Password: DummyAccount123!`
 
 Once you are logged in you will see the naviagtion bar now includes buttons to the homepage, the dashbaord, and to logout. 
